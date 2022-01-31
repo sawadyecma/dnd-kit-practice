@@ -23,13 +23,10 @@ export function SortableItem(props: { id: string }) {
   }
 
   return (
-    <div
-      ref={setNodeRef}
-      style={listWrapperStyle}
-      {...attributes}
-      {...listeners}
-    >
-      <div style={listContentStyle}>{props.id}</div>
+    <div ref={setNodeRef} {...attributes} {...listeners}>
+      <div style={listWrapperStyle}>
+        <div style={listContentStyle}>{props.id}</div>
+      </div>
     </div>
   )
 }
