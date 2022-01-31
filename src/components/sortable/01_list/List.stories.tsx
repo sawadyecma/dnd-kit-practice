@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import { List } from './List'
 
 export default {
-  title: 'sortable/01/List',
+  title: 'sortable/01_list/List',
   component: List,
 } as Meta
 
