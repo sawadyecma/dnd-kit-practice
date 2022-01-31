@@ -51,7 +51,7 @@ export const List = () => {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '200px 200px 200px',
+              gridTemplateColumns: '200px 200px 200px 200px',
             }}
           >
             {items.map((item) => (
