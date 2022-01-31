@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import { Pages } from './Pages'
 
 export default {
-  title: 'grid/01_sample/Pages',
+  title: 'grid/01_insert/Pages',
   component: Pages,
 } as Meta
 
