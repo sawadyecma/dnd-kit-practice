@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { Checkbox, ListItem } from '@material-ui/core'
 
-export const SortableItem = (props: { id: string }) => {
+export const SortableItem = (props: { id: string; children: ReactNode }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: props.id })
 
@@ -14,10 +13,7 @@ export const SortableItem = (props: { id: string }) => {
 
   return (
     <li ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <ListItem>
-        <Checkbox />
-        {props.id}
-      </ListItem>
+      {props.children}
     </li>
   )
 }

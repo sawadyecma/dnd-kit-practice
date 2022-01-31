@@ -1,14 +1,14 @@
 import { Meta, Story } from '@storybook/react'
-import { List } from './List'
+import { SortableList } from './SortableList'
 
 export default {
-  title: 'sortable/01_list/List',
-  component: List,
+  title: 'sortable/03_list_di_comp/SortableList',
+  component: SortableList,
 } as Meta
 
 const Template: Story = () => {
   // eslint-disable-next-line react/react-in-jsx-scope
-  return <List />
+  return <SortableList />
 }
 
 export const Primary = Template.bind({})

@@ -1,11 +1,12 @@
 import { DndContext, DragEndEvent, DragStartEvent } from '@dnd-kit/core'
 import { SortableContext, arrayMove } from '@dnd-kit/sortable'
+import { Checkbox, List, ListItem } from '@material-ui/core'
 import React, { useState } from 'react'
 import { SortableItem } from './SortableItem'
 
 const LIST = ['あいうえお', 'かきくけこ', 'さしすせそ']
 
-export const List = () => {
+export const SortableList = () => {
   const [items, setItems] = useState(LIST)
   const [activeId, setActiveId] = useState<string | null>(null)
   const getIndex = items.indexOf.bind(items)
@@ -35,9 +36,16 @@ export const List = () => {
     <>
       <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart}>
         <SortableContext items={items}>
-          {items.map((item) => (
-            <SortableItem key={item} id={item} />
-          ))}
+          <List>
+            {items.map((item) => (
+              <SortableItem key={item} id={item}>
+                <ListItem>
+                  <Checkbox />
+                  {item}
+                </ListItem>
+              </SortableItem>
+            ))}
+          </List>
         </SortableContext>
       </DndContext>
     </>
