@@ -13,11 +13,11 @@ export const SortableItem = (props: { id: string }) => {
   }
 
   return (
-    <li ref={setNodeRef} style={style} {...attributes} {...listeners}>
+    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
       <ListItem>
         <Checkbox />
         {props.id}
       </ListItem>
-    </li>
+    </div>
   )
 }
